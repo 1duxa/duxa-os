@@ -1,0 +1,6 @@
+[build]
+target = "x86_bare_metal.json"
+
+[target.x86_bare_metal]
+linker = "rust-lld"
+rustflags = ["-C", "link-arg=-Tlink.ld"]

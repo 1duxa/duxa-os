@@ -1,0 +1,19 @@
+[package]
+name = "duxa-os"
+version = "0.1.0"
+edition = "2024"
+authors = ["Andrii Vezhdel <andrewvezhdel@gmail.com>"]
+
+[dependencies]
+
+[unstable]
+build-std = ["core"]
+
+[features]
+default = []
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
