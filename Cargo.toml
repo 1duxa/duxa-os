@@ -1,19 +1,18 @@
 [package]
 name = "duxa-os"
 version = "0.1.0"
-edition = "2024"
-authors = ["Andrii Vezhdel <andrewvezhdel@gmail.com>"]
+edition = "2021"
 
 [dependencies]
-
-[unstable]
-build-std = ["core"]
-
-[features]
-default = []
+# No dependencies needed for now
 
 [profile.dev]
 panic = "abort"
 
 [profile.release]
 panic = "abort"
+lto = true
+codegen-units = 1
+
+[build]
+target = "i686-unknown-none"
